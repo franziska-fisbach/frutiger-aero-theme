@@ -1,149 +1,65 @@
-/* Main timeline background: softer, less harsh while swiping */
 html,
 body,
 .tl-timeline,
 .tl-storyslider,
-.tl-slider-container-mask,
-.tl-slider-container,
-.tl-slide-scrollable-container {
-  background: linear-gradient(180deg, #F8FCFF 0%, #DFF5FF 100%) !important;
+.tl-slider-container-mask {
+  background: linear-gradient(180deg, #7EC9FF 0%, #CFEFFF 100%) !important;
 }
 
-/* Individual slide background */
 .tl-slide {
-  background: transparent !important;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FCFF 100%) !important;
 }
 
-/* Text/card area */
 .tl-slide-content-container,
 .tl-text,
 .tl-text-content-container {
-  background: rgba(255, 255, 255, 0.82) !important;
-  border-radius: 18px !important;
+  background: rgba(255,255,255,0.76) !important;
+  border-radius: 22px !important;
 }
 
-/* Main headline text */
-h2.tl-headline,
-.tl-text h2.tl-headline {
-  color: #1B4965 !important;
-  text-shadow: none !important;
-}
-
-/* Body text */
-.tl-text-content p,
-.tl-text-content {
-  color: #243B4A !important;
-}
-
-/* Date text */
-.tl-headline-date {
-  color: #4D8FD6 !important;
-}
-
-/* Next / previous navigation: smaller and cleaner */
 .tl-timeline .tl-slidenav-next,
-.tl-timeline .tl-slidenav-previous {
-  width: 165px !important;
-  opacity: 0.88 !important;
-}
-
-/* Inner navigation box */
+.tl-timeline .tl-slidenav-previous,
 .tl-timeline .tl-slidenav-next .tl-slidenav-content-container,
 .tl-timeline .tl-slidenav-previous .tl-slidenav-content-container {
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.9),
-    rgba(207, 239, 255, 0.75)
+    rgba(255,255,255,0.85),
+    rgba(126,201,255,0.45)
   ) !important;
-
-  border: 1px solid rgba(255, 255, 255, 0.85) !important;
-  border-radius: 16px !important;
-  box-shadow: 0 0 14px rgba(126, 201, 255, 0.35) !important;
-
-  padding: 8px 10px !important;
-  max-width: 155px !important;
-  min-height: auto !important;
+  border: 1px solid rgba(255,255,255,0.8) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 0 24px rgba(126,201,255,0.55) !important;
 }
 
-/* Hover state: subtle, not oversized */
-.tl-timeline .tl-slidenav-next:hover,
-.tl-timeline .tl-slidenav-previous:hover {
-  opacity: 1 !important;
-}
-
-.tl-timeline .tl-slidenav-next:hover .tl-slidenav-content-container,
-.tl-timeline .tl-slidenav-previous:hover .tl-slidenav-content-container {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.95),
-    rgba(174, 231, 255, 0.8)
-  ) !important;
-
-  box-shadow: 0 0 18px rgba(126, 201, 255, 0.45) !important;
-}
-
-/* Navigation title text: less harsh than white */
 .tl-timeline .tl-slidenav-title {
-  color: #1B4965 !important;
-  font-weight: 600 !important;
-  font-size: 12px !important;
-  line-height: 1.25 !important;
-  text-shadow: none !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 10px rgba(255,255,255,0.9) !important;
+  font-weight: 700 !important;
 }
 
-/* Navigation description/date */
-.tl-timeline .tl-slidenav-description {
-  color: #4D8FD6 !important;
-  font-size: 11px !important;
-}
-
-/* Keep bottom timeline nice */
 .tl-timenav,
 .tl-timenav-slider,
 .tl-timeaxis-background {
   background: linear-gradient(180deg, #F8FCFF 0%, #CFEFFF 100%) !important;
 }
 
-/* Timeline markers */
 .tl-timemarker .tl-timemarker-content-container {
-  background: linear-gradient(180deg, #DFF5FF, #AEE7FF) !important;
-  border-radius: 10px !important;
+  background: linear-gradient(180deg, #AEE7FF, #5FAFE3) !important;
+  border-radius: 12px !important;
   border: 1px solid #FFFFFF !important;
-  box-shadow: 0 0 10px rgba(126, 201, 255, 0.35) !important;
+  box-shadow: 0 0 12px rgba(126,201,255,0.4) !important;
 }
 
-/* Active timeline marker */
 .tl-timemarker.tl-timemarker-active .tl-timemarker-content-container {
-  background: linear-gradient(180deg, #AEE7FF, #72E4F2) !important;
+  background: linear-gradient(180deg, #8FF5FF, #8FD14F) !important;
 }
 
-/* Timeline marker text */
-.tl-timemarker .tl-headline {
-  color: #1B4965 !important;
+h2.tl-headline,
+.tl-text h2.tl-headline {
+  color: #0B3C5D !important;
+  text-shadow: 0 0 6px rgba(126,201,255,0.35) !important;
 }
 
-/* Era / group bands at bottom: softer and more transparent */
-.tl-timegroup {
-  background: rgba(174, 231, 255, 0.28) !important;
-  color: #1B4965 !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.7) !important;
-}
-
-/* Era/group label text */
-.tl-timegroup .tl-timegroup-message {
-  color: #1B4965 !important;
-  font-weight: 600 !important;
-  opacity: 0.8 !important;
-}
-
-/* Menubar buttons */
-.tl-menubar-button {
-  background: rgba(255, 255, 255, 0.75) !important;
-  border-radius: 10px !important;
-  color: #1B4965 !important;
-}
-
-/* Remove overly harsh outlines */
-.tl-timeline * {
-  box-sizing: border-box;
+.tl-headline-date {
+  color: #5FAFE3 !important;
 }
