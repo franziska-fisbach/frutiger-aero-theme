@@ -1,18 +1,65 @@
-/* TEST: if this works, the CSS file is loading */
-
 html,
 body,
 .tl-timeline,
 .tl-storyslider,
-.tl-slider-container-mask,
+.tl-slider-container-mask {
+  background: linear-gradient(180deg, #7EC9FF 0%, #CFEFFF 100%) !important;
+}
+
 .tl-slide {
-  background: hotpink !important;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FCFF 100%) !important;
 }
 
-.tl-timenav {
-  background: lime !important;
+.tl-slide-content-container,
+.tl-text,
+.tl-text-content-container {
+  background: rgba(255,255,255,0.76) !important;
+  border-radius: 22px !important;
 }
 
-.tl-text {
-  background: yellow !important;
+.tl-timeline .tl-slidenav-next,
+.tl-timeline .tl-slidenav-previous,
+.tl-timeline .tl-slidenav-next .tl-slidenav-content-container,
+.tl-timeline .tl-slidenav-previous .tl-slidenav-content-container {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.85),
+    rgba(126,201,255,0.45)
+  ) !important;
+  border: 1px solid rgba(255,255,255,0.8) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 0 24px rgba(126,201,255,0.55) !important;
+}
+
+.tl-timeline .tl-slidenav-title {
+  color: #ffffff !important;
+  text-shadow: 0 0 10px rgba(255,255,255,0.9) !important;
+  font-weight: 700 !important;
+}
+
+.tl-timenav,
+.tl-timenav-slider,
+.tl-timeaxis-background {
+  background: linear-gradient(180deg, #F8FCFF 0%, #CFEFFF 100%) !important;
+}
+
+.tl-timemarker .tl-timemarker-content-container {
+  background: linear-gradient(180deg, #AEE7FF, #5FAFE3) !important;
+  border-radius: 12px !important;
+  border: 1px solid #FFFFFF !important;
+  box-shadow: 0 0 12px rgba(126,201,255,0.4) !important;
+}
+
+.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container {
+  background: linear-gradient(180deg, #8FF5FF, #8FD14F) !important;
+}
+
+h2.tl-headline,
+.tl-text h2.tl-headline {
+  color: #0B3C5D !important;
+  text-shadow: 0 0 6px rgba(126,201,255,0.35) !important;
+}
+
+.tl-headline-date {
+  color: #5FAFE3 !important;
 }
