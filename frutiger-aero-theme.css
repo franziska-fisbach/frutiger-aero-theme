@@ -274,4 +274,115 @@ h3.tl-headline-date {
 
 .tl-timemarker.tl-timemarker-active .tl-timemarker-content-container {
   background: linear-gradient(180deg, rgba(143,245,255,0.85), rgba(174,231,255,0.8)) !important;
+}/* Better Frutiger Aero font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap');
+
+/* Apply new font globally */
+.tl-timeline,
+.tl-timeline h2,
+.tl-timeline h3,
+.tl-timeline p,
+.tl-timeline .tl-headline,
+.tl-timeline .tl-headline-date,
+.tl-timeline .tl-text-content,
+.tl-timeline .tl-slidenav-title,
+.tl-timeline .tl-timegroup-message {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+/* Titles more Frutiger Aero */
+h2.tl-headline,
+.tl-text h2.tl-headline {
+  font-size: 2.1rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.3px !important;
+  color: #19507A !important;
+}
+
+/* Previous button moved inward/right */
+.tl-timeline .tl-slidenav-previous .tl-slidenav-content-container {
+  transform: translateX(12px) !important;
+}
+
+/* Next button balanced */
+.tl-timeline .tl-slidenav-next .tl-slidenav-content-container {
+  transform: translateX(24px) !important;
+}
+
+/* Add actual atmospheric backgrounds to media slides */
+.tl-slide {
+  background:
+    radial-gradient(circle at top left,
+      rgba(143,245,255,0.22),
+      transparent 30%),
+    radial-gradient(circle at bottom right,
+      rgba(143,209,79,0.16),
+      transparent 32%),
+    linear-gradient(
+      180deg,
+      #F7FCFF 0%,
+      #EAF8FF 45%,
+      #F8FCFF 100%
+    ) !important;
+}
+
+/* Media container gets glossy atmosphere */
+.tl-media-content-container {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.65),
+      rgba(207,239,255,0.4)
+    ) !important;
+
+  border-radius: 20px !important;
+
+  padding: 10px !important;
+
+  box-shadow:
+    0 0 22px rgba(126,201,255,0.22),
+    0 4px 18px rgba(0,0,0,0.08) !important;
+}
+
+/* Text box softer and more integrated */
+.tl-text-content-container,
+.tl-text {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.84),
+      rgba(240,250,255,0.82)
+    ) !important;
+
+  backdrop-filter: blur(10px);
+
+  border-radius: 22px !important;
+
+  box-shadow:
+    0 0 18px rgba(126,201,255,0.15) !important;
+}
+
+/* Slightly more vibrant occasional slide variation */
+.tl-slide:nth-child(2n) {
+  background:
+    radial-gradient(circle at top right,
+      rgba(114,228,242,0.18),
+      transparent 30%),
+    linear-gradient(
+      180deg,
+      #F8FCFF 0%,
+      #E3F5FF 100%
+    ) !important;
+}
+
+.tl-slide:nth-child(3n) {
+  background:
+    radial-gradient(circle at bottom left,
+      rgba(143,209,79,0.12),
+      transparent 28%),
+    linear-gradient(
+      180deg,
+      #F8FCFF 0%,
+      #EEF9FF 100%
+    ) !important;
 }
