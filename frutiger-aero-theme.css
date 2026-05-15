@@ -161,6 +161,15 @@ h3.tl-headline-date {
   background: transparent !important;
 }
 
+/* Make the actual year labels white */
+.tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-major .tl-timeaxis-text,
+.tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-minor .tl-timeaxis-text,
+.tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-major,
+.tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-minor {
+  color: rgba(255,255,255,0.92) !important;
+  text-shadow: 0 0 6px rgba(255,255,255,0.35) !important;
+}
+
 .tl-timeaxis-major .tl-timeaxis-tick:before,
 .tl-timeaxis-minor .tl-timeaxis-tick:before {
   background-color: rgba(95,175,227,0.42) !important;
@@ -212,7 +221,7 @@ h3.tl-headline-date {
 }
 
 .tl-timegroup .tl-timegroup-message {
-  color: rgba(255,255,255,0.92) !important;
+  color: rgba(11,60,93,0.68) !important;
   text-shadow: none !important;
   font-weight: 600 !important;
 }
