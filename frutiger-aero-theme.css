@@ -1,91 +1,18 @@
-/* Frutiger Aero Timeline Theme */
+/* TEST: if this works, the CSS file is loading */
 
-.tl-timeline {
-  background: linear-gradient(180deg, #7EC9FF 0%, #CFEFFF 100%) !important;
-}
-
-/* Slide background */
+html,
+body,
+.tl-timeline,
+.tl-storyslider,
+.tl-slider-container-mask,
 .tl-slide {
-  background: linear-gradient(180deg, #FFFFFF 0%, #F8FCFF 100%) !important;
+  background: hotpink !important;
 }
 
-/* Timeline bottom bar */
 .tl-timenav {
-  background: linear-gradient(180deg, #F8FCFF 0%, #CFEFFF 100%) !important;
+  background: lime !important;
 }
 
-/* Previous / next buttons */
-.tl-slidenav-previous,
-.tl-slidenav-next {
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0.75),
-    rgba(126,201,255,0.35)
-  ) !important;
-
-  border: 1px solid rgba(255,255,255,0.8) !important;
-  border-radius: 22px !important;
-
-  box-shadow:
-    0 0 24px rgba(126,201,255,0.45),
-    0 6px 18px rgba(0,0,0,0.15) !important;
-
-  padding: 10px !important;
-}
-
-/* Hover effect */
-.tl-slidenav-previous:hover,
-.tl-slidenav-next:hover {
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0.9),
-    rgba(143,209,79,0.35)
-  ) !important;
-
-  box-shadow:
-    0 0 30px rgba(143,209,79,0.45),
-    0 8px 24px rgba(0,0,0,0.2) !important;
-}
-
-/* Navigation title */
-.tl-slidenav-title {
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  text-shadow: 0 0 10px rgba(255,255,255,0.8) !important;
-}
-
-/* Main headlines */
-h2.tl-headline {
-  color: #0B3C5D !important;
-  text-shadow: 0 0 6px rgba(126,201,255,0.3) !important;
-}
-
-/* Date text */
-.tl-headline-date {
-  color: #5FAFE3 !important;
-}
-
-/* Text box */
 .tl-text {
-  background: rgba(255,255,255,0.72) !important;
-  border-radius: 18px !important;
-  padding: 22px !important;
-}
-
-/* Media container */
-.tl-media-content-container {
-  border-radius: 18px !important;
-  box-shadow: 0 0 20px rgba(126,201,255,0.25) !important;
-}
-
-/* Timeline markers */
-.tl-timemarker-content-container {
-  background: linear-gradient(180deg, #AEE7FF, #5FAFE3) !important;
-  border-radius: 10px !important;
-  color: white !important;
-}
-
-/* Active marker */
-.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container {
-  background: linear-gradient(180deg, #8FF5FF, #8FD14F) !important;
+  background: yellow !important;
 }
