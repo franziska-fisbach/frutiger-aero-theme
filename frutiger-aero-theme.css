@@ -24,12 +24,31 @@ body,
   background: transparent !important;
 }
 
-/* 2. Text/card area */
-.tl-slide-content-container,
+/* 2. Text/card area
+   Remove the large content box around the whole slide.
+   Keep glass styling only on the actual text/headline area. */
+.tl-slide-content-container {
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
 .tl-text,
 .tl-text-content-container {
-  background: rgba(255,255,255,0.76) !important;
+  background: rgba(255,255,255,0.78) !important;
   border-radius: 22px !important;
+  box-shadow: 0 0 18px rgba(126,201,255,0.18) !important;
+}
+
+.tl-text {
+  padding: 22px !important;
+}
+
+/* Give media area a soft atmosphere without boxing the whole slide. */
+.tl-media-content-container {
+  background: rgba(255,255,255,0.28) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 0 18px rgba(126,201,255,0.16) !important;
 }
 
 /* 3. Headline and date styling, including the first slide after the title slide. */
@@ -46,9 +65,14 @@ h2.tl-headline,
 .tl-slide .tl-headline-date,
 .tl-slide h3.tl-headline-date,
 .tl-text .tl-headline-date,
-h3.tl-headline-date {
+h3.tl-headline-date,
+.tl-slide .tl-text h3.tl-headline-date,
+.tl-slide .tl-text-content-container h3.tl-headline-date,
+.tl-slide:not(.tl-slide-titleslide) h3.tl-headline-date {
   color: #5FAFE3 !important;
   text-shadow: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* 4. Navigation arrows: remove large surrounding boxes.
@@ -85,6 +109,15 @@ h3.tl-headline-date {
 .tl-timeline .tl-slidenav-previous:hover .tl-slidenav-description {
   opacity: 1 !important;
   visibility: visible !important;
+}
+
+/* Position the previous/next arrow areas. */
+.tl-timeline .tl-slidenav-next {
+  transform: translate(18px, -14px) !important;
+}
+
+.tl-timeline .tl-slidenav-previous {
+  transform: translate(-18px, -14px) !important;
 }
 
 /* Create the glass box only around the arrow icon itself. */
@@ -183,6 +216,29 @@ h3.tl-headline-date {
 
 .tl-timemarker.tl-timemarker-active .tl-timemarker-timespan {
   background: rgba(143,245,255,0.25) !important;
+}
+
+/* Extra fix for the first non-title slide, which TimelineJS sometimes styles differently. */
+.tl-slide:not(.tl-slide-titleslide):first-of-type h2.tl-headline,
+.tl-slide:not(.tl-slide-titleslide):first-of-type .tl-text-content,
+.tl-slide:not(.tl-slide-titleslide):first-of-type .tl-text-content p,
+.tl-slide:not(.tl-slide-titleslide):first-of-type .tl-headline-date {
+  color: inherit !important;
+  text-shadow: none !important;
+}
+
+.tl-slide:not(.tl-slide-titleslide):first-of-type h2.tl-headline {
+  color: #0B3C5D !important;
+  text-shadow: 0 0 6px rgba(126,201,255,0.35) !important;
+}
+
+.tl-slide:not(.tl-slide-titleslide):first-of-type .tl-text-content,
+.tl-slide:not(.tl-slide-titleslide):first-of-type .tl-text-content p {
+  color: #243B4A !important;
+}
+
+.tl-slide:not(.tl-slide-titleslide):first-of-type .tl-headline-date {
+  color: #5FAFE3 !important;
 }
 
 /* 7. Era/group bands: softer, translucent, and less visually dominant. */
