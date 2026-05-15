@@ -24,165 +24,94 @@ body,
   background: transparent !important;
 }
 
+/* 2. Text/card area
+   Remove the large content box around the whole slide.
+   Keep glass styling only on the actual text/headline area. */
+.tl-slide-content-container {
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
 /* 2. Text/card area */
 .tl-slide-content-container,
 .tl-text,
 .tl-text-content-container {
+  background: rgba(255,255,255,0.78) !important;
   background: rgba(255,255,255,0.76) !important;
   border-radius: 22px !important;
+  box-shadow: 0 0 18px rgba(126,201,255,0.18) !important;
+}
+
+.tl-text {
+  padding: 22px !important;
+}
+
+/* Give media area a soft atmosphere without boxing the whole slide. */
+.tl-media-content-container {
+  background: rgba(255,255,255,0.28) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 0 18px rgba(126,201,255,0.16) !important;
 }
 
 /* 3. Headline and date styling, including the first slide after the title slide. */
-h2.tl-headline,
-.tl-text h2.tl-headline,
-.tl-slide h2.tl-headline,
-.tl-slide .tl-text h2.tl-headline,
-.tl-slide .tl-headline-title {
-  color: #0B3C5D !important;
-  text-shadow: 0 0 6px rgba(126,201,255,0.35) !important;
-}
-
-.tl-headline-date,
+@@ -65,14 +46,9 @@
 .tl-slide .tl-headline-date,
 .tl-slide h3.tl-headline-date,
 .tl-text .tl-headline-date,
+h3.tl-headline-date,
+.tl-slide .tl-text h3.tl-headline-date,
+.tl-slide .tl-text-content-container h3.tl-headline-date,
+.tl-slide:not(.tl-slide-titleslide) h3.tl-headline-date {
 h3.tl-headline-date {
   color: #5FAFE3 !important;
   text-shadow: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* 4. Navigation arrows: remove large surrounding boxes.
-   The whole navigation area stays transparent by default. */
-.tl-timeline .tl-slidenav-next,
-.tl-timeline .tl-slidenav-previous {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  opacity: 1 !important;
-}
-
-.tl-timeline .tl-slidenav-next .tl-slidenav-content-container,
-.tl-timeline .tl-slidenav-previous .tl-slidenav-content-container {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-
-/* Hide next/previous text until hover. */
-.tl-timeline .tl-slidenav-title,
-.tl-timeline .tl-slidenav-description {
-  opacity: 0 !important;
-  visibility: hidden !important;
-  transition: opacity 0.22s ease, visibility 0.22s ease !important;
-  color: #5FAFE3 !important;
-  text-shadow: 0 0 8px rgba(255,255,255,0.70) !important;
-}
-
-.tl-timeline .tl-slidenav-next:hover .tl-slidenav-title,
-.tl-timeline .tl-slidenav-next:hover .tl-slidenav-description,
-.tl-timeline .tl-slidenav-previous:hover .tl-slidenav-title,
-.tl-timeline .tl-slidenav-previous:hover .tl-slidenav-description {
-  opacity: 1 !important;
+@@ -111,15 +87,6 @@
   visibility: visible !important;
+}
+
+/* Position the previous/next arrow areas. */
+.tl-timeline .tl-slidenav-next {
+  transform: translate(18px, -14px) !important;
+}
+
+.tl-timeline .tl-slidenav-previous {
+  transform: translate(-18px, -14px) !important;
 }
 
 /* Create the glass box only around the arrow icon itself. */
 .tl-timeline .tl-slidenav-next .tl-slidenav-icon,
 .tl-timeline .tl-slidenav-previous .tl-slidenav-icon {
-  width: 42px !important;
-  height: 42px !important;
-  min-width: 42px !important;
-  min-height: 42px !important;
-  border-radius: 50% !important;
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0.38),
-    rgba(126,201,255,0.26)
-  ) !important;
-  border: 1px solid rgba(255,255,255,0.55) !important;
-  box-shadow: 0 0 13px rgba(126,201,255,0.32) !important;
-  transition: background 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease !important;
+@@ -218,38 +185,15 @@
+  background: rgba(143,245,255,0.25) !important;
 }
 
-.tl-timeline .tl-slidenav-next:hover .tl-slidenav-icon,
-.tl-timeline .tl-slidenav-previous:hover .tl-slidenav-icon {
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0.86),
-    rgba(126,201,255,0.58)
-  ) !important;
-  box-shadow: 0 0 22px rgba(126,201,255,0.60) !important;
-  transform: scale(1.04) !important;
-}
-
-/* Keep arrow symbol readable and Aero-like. */
-.tl-timeline .tl-slidenav-next .tl-slidenav-icon::before,
-.tl-timeline .tl-slidenav-previous .tl-slidenav-icon::before {
-  color: #5FAFE3 !important;
-  text-shadow: 0 0 7px rgba(255,255,255,0.85) !important;
-}
-
-/* 5. Timeline navigation: preserve the nicer bottom bar but make it more Aero. */
-.tl-timenav,
-.tl-timenav-slider {
-  background:
-    radial-gradient(circle at 20% 20%, rgba(143,245,255,0.24), transparent 32%),
-    linear-gradient(180deg, rgba(248,252,255,0.96) 0%, rgba(207,239,255,0.90) 100%) !important;
-}
-
-.tl-timeaxis-background {
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.72), rgba(174,231,255,0.42)) !important;
-  border-top: 1px solid rgba(255,255,255,0.70) !important;
-}
-
-.tl-timeaxis .tl-timeaxis-content-container,
-.tl-timeaxis {
-  background: transparent !important;
-}
-
-.tl-timeaxis-major .tl-timeaxis-tick:before,
-.tl-timeaxis-minor .tl-timeaxis-tick:before {
-  background-color: rgba(95,175,227,0.42) !important;
-}
-
-/* 6. Timeline markers: softer and more translucent. */
-.tl-timemarker .tl-timemarker-content-container {
-  background: linear-gradient(
-    180deg,
-    rgba(174,231,255,0.68),
-    rgba(95,175,227,0.46)
-  ) !important;
-  border-radius: 12px !important;
-  border: 1px solid rgba(255,255,255,0.76) !important;
-  box-shadow: 0 0 10px rgba(126,201,255,0.28) !important;
-}
-
-.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container {
-  background: linear-gradient(
-    180deg,
-    rgba(143,245,255,0.76),
-    rgba(143,209,79,0.42)
-  ) !important;
-  border: 1px solid rgba(255,255,255,0.90) !important;
-  box-shadow: 0 0 14px rgba(143,245,255,0.42) !important;
-}
-
-.tl-timemarker .tl-headline,
-.tl-timemarker .tl-timemarker-text h2.tl-headline {
-  color: #0B3C5D !important;
+/* Extra fix for the first non-title slide, which TimelineJS sometimes styles differently. */
+.tl-slide:not(.tl-slide-titleslide):first-of-type h2.tl-headline,
+.tl-slide:not(.tl-slide-titleslide):first-of-type .tl-text-content,
+.tl-slide:not(.tl-slide-titleslide):first-of-type .tl-text-content p,
+.tl-slide:not(.tl-slide-titleslide):first-of-type .tl-headline-date {
+  color: inherit !important;
   text-shadow: none !important;
 }
 
-/* Timespans should feel like faint glass bands rather than heavy blocks. */
-.tl-timemarker .tl-timemarker-timespan {
-  background: rgba(174,231,255,0.22) !important;
-  border-color: rgba(255,255,255,0.35) !important;
+.tl-slide:not(.tl-slide-titleslide):first-of-type h2.tl-headline {
+  color: #0B3C5D !important;
+  text-shadow: 0 0 6px rgba(126,201,255,0.35) !important;
 }
 
-.tl-timemarker.tl-timemarker-active .tl-timemarker-timespan {
-  background: rgba(143,245,255,0.25) !important;
+.tl-slide:not(.tl-slide-titleslide):first-of-type .tl-text-content,
+.tl-slide:not(.tl-slide-titleslide):first-of-type .tl-text-content p {
+  color: #243B4A !important;
+}
+
+.tl-slide:not(.tl-slide-titleslide):first-of-type .tl-headline-date {
+  color: #5FAFE3 !important;
 }
 
 /* 7. Era/group bands: softer, translucent, and less visually dominant. */
