@@ -275,44 +275,6 @@ h2.tl-headline {
     radial-gradient(circle at 15% 80%, rgba(162,214,90,0.20), transparent 30%),
     linear-gradient(180deg, #FFFFFF 0%, #F4FBEA 100%) !important;
 }
-
-/* ---------- BETTER SLIDE VERTICAL ALIGNMENT ---------- */
-
-.tl-slide-content-container {
-  align-items: center !important;
-}
-/* ---------- BETTER SLIDE VERTICAL ALIGNMENT ---------- */
-
-.tl-slide-content-container {
-  display: flex !important;
-  align-items: center !important;
-}
-
-/* media block */
-.tl-slide-media {
-  display: flex !important;
-  align-items: center !important;
-}
-
-/* text block */
-.tl-slide-text {
-  display: flex !important;
-  align-items: center !important;
-}
-
-/* proper spacing */
-.tl-text {
-  padding-top: 2.2rem !important;
-  padding-bottom: 2.2rem !important;
-}
-/* align text visually with media center */
-.tl-text {
-  display: flex !important;
-  align-items: center !important;
-  padding-top: 2.2rem !important;
-  padding-bottom: 2.2rem !important;
-}
-
 /* ---------- DATES MORE COLOURFUL ---------- */
 
 .tl-headline-date {
@@ -474,44 +436,4 @@ h2.tl-headline {
   top: auto !important;
   bottom: 4px !important;
 }
-/* ===== FIX: MEDIA HIGHER / ALIGNED WITH TEXT ===== */
 
-.tl-slide-content-container {
-  align-items: center !important;
-}
-
-.tl-slide-media {
-  transform: translateY(-55px) !important;
-}
-
-.tl-slide-text {
-  transform: translateY(-20px) !important;
-}
-/* ===== FIX: RESET MEDIA/TEXT ALIGNMENT ===== */
-
-.tl-slide-media,
-.tl-slide-text {
-  transform: none !important;
-}
-
-.tl-slide-content-container {
-  display: table !important;
-  vertical-align: middle !important;
-}
-
-.tl-slide-media,
-.tl-slide-text {
-  display: table-cell !important;
-  vertical-align: middle !important;
-}
-
-.tl-text {
-  display: block !important;
-  padding-top: 1.8rem !important;
-  padding-bottom: 1.8rem !important;
-}
-
-.tl-media-content-container {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
