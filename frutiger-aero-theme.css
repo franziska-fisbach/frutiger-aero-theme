@@ -474,3 +474,16 @@ h2.tl-headline {
   top: auto !important;
   bottom: 4px !important;
 }
+/* ===== FIX: MEDIA HIGHER / ALIGNED WITH TEXT ===== */
+
+.tl-slide-content-container {
+  align-items: center !important;
+}
+
+.tl-slide-media {
+  transform: translateY(-55px) !important;
+}
+
+.tl-slide-text {
+  transform: translateY(-20px) !important;
+}
