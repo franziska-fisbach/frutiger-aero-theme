@@ -1,227 +1,249 @@
-/* =========================================================
-   FRUTIGER AERO TIMELINEJS THEME
-   Clean working base for Knight Lab TimelineJS
-   ========================================================= */
+/* Frutiger Aero TimelineJS Theme */
 
-/* 1. Main background: keep the visible background on the mask/container,
-   not on individual slides. This prevents the background from appearing
-   only during slide movement. */
+/* ---------- GLOBAL ---------- */
+
 html,
 body,
-.tl-timeline,
-.tl-storyslider,
-.tl-slider-container,
-.tl-slider-container-mask {
-  background:
-    radial-gradient(circle at 18% 18%, rgba(143,245,255,0.30), transparent 28%),
-    radial-gradient(circle at 82% 20%, rgba(143,209,79,0.18), transparent 30%),
-    radial-gradient(circle at 50% 90%, rgba(255,255,255,0.50), transparent 35%),
-    linear-gradient(180deg, #7EC9FF 0%, #CFEFFF 58%, #F8FCFF 100%) !important;
+.tl-timeline {
+  font-family: "Segoe UI", "SegoeUI", Arial, sans-serif !important;
+  color: #24303A !important;
+  background: #FFF8F5 !important;
 }
 
-/* Keep slides themselves visually empty for now. */
+.tl-slider-container-mask,
+.tl-storyslider {
+  background:
+    radial-gradient(circle at 18% 15%, rgba(106,176,222,0.20), transparent 32%),
+    radial-gradient(circle at 82% 18%, rgba(162,214,90,0.16), transparent 30%),
+    linear-gradient(180deg, #FFFFFF 0%, #EEF7FC 100%) !important;
+}
+
 .tl-slide {
   background: transparent !important;
 }
 
-/* 2. Text/card area */
-.tl-slide-content-container,
-.tl-text,
+/* ---------- TEXT PANEL ---------- */
+
+.tl-text {
+  padding: 2.8rem 2.4rem !important;
+}
+
 .tl-text-content-container {
-  background: rgba(255,255,255,0.76) !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.72), rgba(217,237,248,0.42)),
+    radial-gradient(circle at top left, rgba(255,255,255,0.85), transparent 45%) !important;
+  border: 1px solid rgba(255,255,255,0.9) !important;
   border-radius: 22px !important;
+  box-shadow:
+    0 18px 34px rgba(77,145,189,0.16),
+    inset 0 1px 0 rgba(255,255,255,0.95) !important;
+  padding: 1.8rem 2rem !important;
+  backdrop-filter: blur(10px);
 }
 
-/* 3. Headline and date styling, including the first slide after the title slide. */
-h2.tl-headline,
-.tl-text h2.tl-headline,
-.tl-slide h2.tl-headline,
-.tl-slide .tl-text h2.tl-headline,
-.tl-slide .tl-headline-title {
-  color: #0B3C5D !important;
-  text-shadow: 0 0 6px rgba(126,201,255,0.35) !important;
+h2.tl-headline {
+  font-family: "Segoe UI", "SegoeUI", Arial, sans-serif !important;
+  font-weight: 700 !important;
+  color: #24303A !important;
+  line-height: 1.18 !important;
+  margin-bottom: 1rem !important;
 }
 
-.tl-headline-date,
-.tl-slide .tl-headline-date,
-.tl-slide h3.tl-headline-date,
-.tl-text .tl-headline-date,
-h3.tl-headline-date {
-  color: #5FAFE3 !important;
-  text-shadow: none !important;
+.tl-headline-date {
+  font-family: "Segoe UI", "SegoeUI", Arial, sans-serif !important;
+  font-weight: 700 !important;
+  color: #4D91BD !important;
+  margin-bottom: 1rem !important;
+  letter-spacing: 0.02em !important;
 }
 
-/* 4. Navigation arrows: remove large surrounding boxes.
-   The whole navigation area stays transparent by default. */
+.tl-text-content,
+.tl-text-content p {
+  font-family: "Segoe UI", "SegoeUI", Arial, sans-serif !important;
+  font-weight: 400 !important;
+  color: #24303A !important;
+  line-height: 1.62 !important;
+}
+
+.tl-credit,
+.tl-caption {
+  font-family: "Segoe UI", "SegoeUI", Arial, sans-serif !important;
+  color: #5E6B75 !important;
+  line-height: 1.45 !important;
+}
+
+/* ---------- MEDIA ---------- */
+
+.tl-media-content-container {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.tl-media-content {
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  box-shadow:
+    0 18px 32px rgba(36,48,58,0.18),
+    0 4px 10px rgba(106,176,222,0.18) !important;
+}
+
+/* ---------- NEXT / PREVIOUS NAV ---------- */
+
 .tl-timeline .tl-slidenav-next,
 .tl-timeline .tl-slidenav-previous {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  opacity: 1 !important;
+  overflow: visible !important;
 }
 
 .tl-timeline .tl-slidenav-next .tl-slidenav-content-container,
 .tl-timeline .tl-slidenav-previous .tl-slidenav-content-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  padding: 0 !important;
 }
 
-/* Hide next/previous text until hover. */
-.tl-timeline .tl-slidenav-title,
-.tl-timeline .tl-slidenav-description {
+.tl-slidenav-icon {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 999px !important;
+  background:
+    radial-gradient(circle at 35% 25%, rgba(255,255,255,0.95), rgba(255,255,255,0.15) 45%, transparent 46%),
+    linear-gradient(180deg, rgba(255,255,255,0.72), rgba(106,176,222,0.45)) !important;
+  border: 1px solid rgba(255,255,255,0.9) !important;
+  box-shadow:
+    0 8px 18px rgba(77,145,189,0.24),
+    inset 0 -3px 8px rgba(77,145,189,0.22) !important;
   opacity: 0 !important;
-  visibility: hidden !important;
-  transition: opacity 0.22s ease, visibility 0.22s ease !important;
-  color: #5FAFE3 !important;
-  text-shadow: 0 0 8px rgba(255,255,255,0.70) !important;
+  transform: scale(0.94) !important;
+  transition: all 220ms ease !important;
 }
 
-.tl-timeline .tl-slidenav-next:hover .tl-slidenav-title,
-.tl-timeline .tl-slidenav-next:hover .tl-slidenav-description,
-.tl-timeline .tl-slidenav-previous:hover .tl-slidenav-title,
-.tl-timeline .tl-slidenav-previous:hover .tl-slidenav-description {
+.tl-slidenav-next:hover .tl-slidenav-icon,
+.tl-slidenav-previous:hover .tl-slidenav-icon {
   opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* Move navigation slightly more inward so arrows and labels are fully visible. */
-.tl-timeline .tl-slidenav-next {
-  right: 24px !important;
-}
-
-.tl-timeline .tl-slidenav-previous {
-  left: 24px !important;
-}
-
-.tl-timeline .tl-slidenav-next .tl-slidenav-title,
-.tl-timeline .tl-slidenav-next .tl-slidenav-description {
-  margin-right: 12px !important;
-}
-
-.tl-timeline .tl-slidenav-previous .tl-slidenav-title,
-.tl-timeline .tl-slidenav-previous .tl-slidenav-description {
-  margin-left: 12px !important;
-}
-
-/* Create the glass box only around the arrow icon itself. */
-.tl-timeline .tl-slidenav-next .tl-slidenav-icon,
-.tl-timeline .tl-slidenav-previous .tl-slidenav-icon {
-  width: 42px !important;
-  height: 42px !important;
-  min-width: 42px !important;
-  min-height: 42px !important;
-  border-radius: 50% !important;
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0.38),
-    rgba(126,201,255,0.26)
-  ) !important;
-  border: 1px solid rgba(255,255,255,0.55) !important;
-  box-shadow: 0 0 13px rgba(126,201,255,0.32) !important;
-  transition: background 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease !important;
-}
-
-.tl-timeline .tl-slidenav-next:hover .tl-slidenav-icon,
-.tl-timeline .tl-slidenav-previous:hover .tl-slidenav-icon {
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0.86),
-    rgba(126,201,255,0.58)
-  ) !important;
-  box-shadow: 0 0 22px rgba(126,201,255,0.60) !important;
-  transform: scale(1.04) !important;
-}
-
-/* Keep arrow symbol readable and Aero-like. */
-.tl-timeline .tl-slidenav-next .tl-slidenav-icon::before,
-.tl-timeline .tl-slidenav-previous .tl-slidenav-icon::before {
-  color: #5FAFE3 !important;
-  text-shadow: 0 0 7px rgba(255,255,255,0.85) !important;
-}
-
-/* 5. Timeline navigation: preserve the nicer bottom bar but make it more Aero. */
-.tl-timenav,
-.tl-timenav-slider {
+  transform: scale(1) !important;
   background:
-    radial-gradient(circle at 20% 20%, rgba(143,245,255,0.24), transparent 32%),
-    linear-gradient(180deg, rgba(248,252,255,0.96) 0%, rgba(207,239,255,0.90) 100%) !important;
+    radial-gradient(circle at 35% 25%, rgba(255,255,255,0.98), rgba(255,255,255,0.18) 45%, transparent 46%),
+    linear-gradient(180deg, rgba(255,255,255,0.82), rgba(255,111,97,0.48)) !important;
 }
 
+.tl-slidenav-icon:before {
+  color: #24303A !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 48px !important;
+  height: 48px !important;
+  line-height: 48px !important;
+  text-shadow: 0 1px 8px rgba(255,255,255,0.85) !important;
+}
+
+.tl-slidenav-title {
+  max-width: 180px !important;
+  opacity: 0 !important;
+  background: rgba(255,255,255,0.82) !important;
+  border: 1px solid rgba(255,255,255,0.9) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 20px rgba(77,145,189,0.18) !important;
+  padding: 0.55rem 0.7rem !important;
+  font-family: "Segoe UI", "SegoeUI", Arial, sans-serif !important;
+  font-weight: 700 !important;
+  color: #24303A !important;
+  text-align: center !important;
+  transition: opacity 220ms ease !important;
+}
+
+.tl-slidenav-next:hover .tl-slidenav-title,
+.tl-slidenav-previous:hover .tl-slidenav-title {
+  opacity: 1 !important;
+}
+
+.tl-slidenav-description {
+  display: none !important;
+}
+
+/* ---------- TIMENAV ---------- */
+
+.tl-timenav {
+  background:
+    linear-gradient(180deg, #FFFFFF 0%, #D9EDF8 100%) !important;
+  border-top: 1px solid rgba(106,176,222,0.28) !important;
+}
+
+.tl-timeaxis,
 .tl-timeaxis-background {
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.72), rgba(174,231,255,0.42)) !important;
-  border-top: 1px solid rgba(255,255,255,0.70) !important;
+  background: rgba(255,255,255,0.52) !important;
 }
 
-.tl-timeaxis .tl-timeaxis-content-container,
-.tl-timeaxis {
-  background: transparent !important;
+.tl-timeaxis-tick:before {
+  background: rgba(77,145,189,0.45) !important;
 }
 
-/* Make the actual year labels white */
-.tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-major .tl-timeaxis-text,
-.tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-minor .tl-timeaxis-text,
-.tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-major,
-.tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-minor {
-  color: rgba(255,255,255,0.92) !important;
-  text-shadow: 0 0 6px rgba(255,255,255,0.35) !important;
+.tl-menubar {
+  background: rgba(255,255,255,0.72) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 8px 18px rgba(77,145,189,0.16) !important;
 }
 
-.tl-timeaxis-major .tl-timeaxis-tick:before,
-.tl-timeaxis-minor .tl-timeaxis-tick:before {
-  background-color: rgba(95,175,227,0.42) !important;
+.tl-menubar-button {
+  color: #4D91BD !important;
 }
 
-/* 6. Timeline markers: softer and more translucent. */
+.tl-menubar-button:hover {
+  background: #FFF2AE !important;
+  color: #3A3420 !important;
+}
+
+/* ---------- TIMELINE FLAGS ---------- */
+
 .tl-timemarker .tl-timemarker-content-container {
-  background: linear-gradient(
-    180deg,
-    rgba(174,231,255,0.68),
-    rgba(95,175,227,0.46)
-  ) !important;
+  background:
+    linear-gradient(180deg, #FFFFFF 0%, #D9EDF8 100%) !important;
+  border: 1px solid rgba(106,176,222,0.45) !important;
   border-radius: 12px !important;
-  border: 1px solid rgba(255,255,255,0.76) !important;
-  box-shadow: 0 0 10px rgba(126,201,255,0.28) !important;
+  box-shadow: 0 8px 16px rgba(77,145,189,0.15) !important;
 }
 
 .tl-timemarker.tl-timemarker-active .tl-timemarker-content-container {
-  background: linear-gradient(
-    180deg,
-    rgba(143,245,255,0.76),
-    rgba(143,209,79,0.42)
-  ) !important;
-  border: 1px solid rgba(255,255,255,0.90) !important;
-  box-shadow: 0 0 14px rgba(143,245,255,0.42) !important;
+  background:
+    linear-gradient(180deg, #FFFFFF 0%, #FFD6D1 100%) !important;
+  border-color: #FF6F61 !important;
+  box-shadow: 0 0 18px rgba(255,111,97,0.28) !important;
 }
 
-.tl-timemarker .tl-headline,
 .tl-timemarker .tl-timemarker-text h2.tl-headline {
-  color: #0B3C5D !important;
-  text-shadow: none !important;
+  font-family: "Segoe UI", "SegoeUI", Arial, sans-serif !important;
+  font-weight: 700 !important;
+  color: #24303A !important;
 }
 
-/* Timespans should feel like faint glass bands rather than heavy blocks. */
-.tl-timemarker .tl-timemarker-timespan {
-  background: rgba(174,231,255,0.22) !important;
-  border-color: rgba(255,255,255,0.35) !important;
+.tl-timemarker.tl-timemarker-active .tl-timemarker-text h2.tl-headline {
+  color: #D9574B !important;
 }
 
-.tl-timemarker.tl-timemarker-active .tl-timemarker-timespan {
-  background: rgba(143,245,255,0.25) !important;
+.tl-timemarker-timespan {
+  background: rgba(106,176,222,0.16) !important;
 }
 
-/* 7. Era/group bands: softer, translucent, and less visually dominant. */
-.tl-timegroup {
-  background: rgba(207,239,255,0.18) !important;
-  border-top: 1px solid rgba(255,255,255,0.50) !important;
-  border-bottom: 1px solid rgba(255,255,255,0.28) !important;
+/* ---------- ERAS ---------- */
+
+.tl-timeera {
+  background: rgba(106,176,222,0.12) !important;
 }
 
-.tl-timegroup .tl-timegroup-message {
-  color: rgba(11,60,93,0.68) !important;
-  text-shadow: none !important;
-  font-weight: 600 !important;
+.tl-timeera-background {
+  background: linear-gradient(180deg, rgba(238,247,252,0.78), rgba(255,248,245,0.52)) !important;
+}
+
+.tl-timeera .tl-headline {
+  color: #4D91BD !important;
+  font-family: "Segoe UI", "SegoeUI", Arial, sans-serif !important;
+  font-weight: 700 !important;
 }
