@@ -247,3 +247,219 @@ h2.tl-headline {
   font-family: "Segoe UI", "SegoeUI", Arial, sans-serif !important;
   font-weight: 700 !important;
 }
+/* ===== DESIGN UPDATE 2: COLOUR + NAV REFINEMENTS ===== */
+/* ---------- STRONGER COLOUR SYSTEM ---------- */
+
+.tl-slider-container-mask,
+.tl-storyslider {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255,111,97,0.18), transparent 30%),
+    radial-gradient(circle at 85% 22%, rgba(242,214,75,0.26), transparent 28%),
+    radial-gradient(circle at 70% 82%, rgba(162,214,90,0.22), transparent 32%),
+    linear-gradient(180deg, #FFFFFF 0%, #EEF7FC 100%) !important;
+}
+
+/* Alternate slide background moods */
+.tl-slide:nth-child(3n+1) {
+  background: linear-gradient(180deg, #FFFFFF 0%, #EEF7FC 100%) !important;
+}
+
+.tl-slide:nth-child(3n+2) {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(242,214,75,0.22), transparent 28%),
+    linear-gradient(180deg, #FFFFFF 0%, #FFF9D9 100%) !important;
+}
+
+.tl-slide:nth-child(3n+3) {
+  background:
+    radial-gradient(circle at 15% 80%, rgba(162,214,90,0.20), transparent 30%),
+    linear-gradient(180deg, #FFFFFF 0%, #F4FBEA 100%) !important;
+}
+
+/* ---------- BETTER SLIDE VERTICAL ALIGNMENT ---------- */
+
+.tl-slide-content-container {
+  align-items: center !important;
+}
+
+/* keep media visually centered */
+.tl-media {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.tl-media-content-container {
+  margin-top: 0 !important;
+  align-self: center !important;
+}
+
+/* align text visually with media center */
+.tl-text {
+  display: flex !important;
+  align-items: center !important;
+  padding-top: 2.2rem !important;
+  padding-bottom: 2.2rem !important;
+}
+
+/* ---------- DATES MORE COLOURFUL ---------- */
+
+.tl-headline-date {
+  color: #FF6F61 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  margin-bottom: 1.1rem !important;
+}
+
+/* ---------- PREVIOUS / NEXT TITLE TEXT ---------- */
+
+/* remove container around slidenav text */
+.tl-slidenav-title {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0.4rem 0 !important;
+  color: #FF6F61 !important;
+  font-weight: 700 !important;
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.85),
+    0 0 10px rgba(255,111,97,0.35) !important;
+}
+
+/* previous title left aligned */
+.tl-slidenav-previous .tl-slidenav-title {
+  text-align: left !important;
+  align-self: flex-start !important;
+}
+
+/* next title right aligned */
+.tl-slidenav-next .tl-slidenav-title {
+  text-align: right !important;
+  align-self: flex-end !important;
+}
+
+/* ---------- STRONGER / CENTERED ARROW BUBBLES ---------- */
+
+.tl-timeline .tl-slidenav-next,
+.tl-timeline .tl-slidenav-previous {
+  width: 120px !important;
+}
+
+/* move arrows slightly inward */
+.tl-slidenav-next {
+  right: 18px !important;
+}
+
+.tl-slidenav-previous {
+  left: 18px !important;
+}
+
+.tl-slidenav-icon {
+  width: 58px !important;
+  height: 58px !important;
+  background:
+    radial-gradient(circle at 32% 24%, rgba(255,255,255,0.95), rgba(255,255,255,0.18) 45%, transparent 46%),
+    linear-gradient(180deg, #FFD6D1 0%, #FF6F61 100%) !important;
+  border: 1px solid rgba(255,255,255,0.95) !important;
+  box-shadow:
+    0 10px 22px rgba(217,87,75,0.35),
+    inset 0 -4px 10px rgba(217,87,75,0.28),
+    inset 0 2px 6px rgba(255,255,255,0.75) !important;
+}
+
+.tl-slidenav-icon:before {
+  width: 58px !important;
+  height: 58px !important;
+  line-height: 58px !important;
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 6px rgba(36,48,58,0.45) !important;
+}
+
+/* hover: yellow-green glossy pop */
+.tl-slidenav-next:hover .tl-slidenav-icon,
+.tl-slidenav-previous:hover .tl-slidenav-icon {
+  background:
+    radial-gradient(circle at 32% 24%, rgba(255,255,255,0.98), rgba(255,255,255,0.2) 45%, transparent 46%),
+    linear-gradient(180deg, #FFF2AE 0%, #A2D65A 100%) !important;
+  box-shadow:
+    0 12px 28px rgba(124,177,59,0.42),
+    inset 0 -4px 10px rgba(124,177,59,0.28),
+    inset 0 2px 6px rgba(255,255,255,0.8) !important;
+}
+
+/* ---------- MORE COLOURFUL TIMENAV ---------- */
+
+.tl-timenav {
+  background:
+    radial-gradient(circle at 15% 35%, rgba(255,111,97,0.18), transparent 28%),
+    radial-gradient(circle at 60% 15%, rgba(242,214,75,0.24), transparent 24%),
+    radial-gradient(circle at 85% 60%, rgba(162,214,90,0.20), transparent 28%),
+    linear-gradient(180deg, #FFFFFF 0%, #D9EDF8 100%) !important;
+  border-top: 1px solid rgba(106,176,222,0.36) !important;
+}
+
+/* markers more colourful */
+.tl-timemarker .tl-timemarker-content-container {
+  background: linear-gradient(180deg, #FFFFFF 0%, #D9EDF8 100%) !important;
+  border: 1px solid rgba(106,176,222,0.55) !important;
+}
+
+.tl-timemarker:nth-child(4n+1) .tl-timemarker-content-container {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFD6D1 100%) !important;
+  border-color: #FF6F61 !important;
+}
+
+.tl-timemarker:nth-child(4n+2) .tl-timemarker-content-container {
+  background: linear-gradient(180deg, #FFFFFF 0%, #D9EDF8 100%) !important;
+  border-color: #6AB0DE !important;
+}
+
+.tl-timemarker:nth-child(4n+3) .tl-timemarker-content-container {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF2AE 100%) !important;
+  border-color: #D9BC2F !important;
+}
+
+.tl-timemarker:nth-child(4n+4) .tl-timemarker-content-container {
+  background: linear-gradient(180deg, #FFFFFF 0%, #DDF0BC 100%) !important;
+  border-color: #A2D65A !important;
+}
+
+.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container {
+  background: linear-gradient(180deg, #FF6F61 0%, #D9574B 100%) !important;
+  border-color: #FFFFFF !important;
+  box-shadow: 0 0 22px rgba(255,111,97,0.42) !important;
+}
+
+/* active marker text */
+.tl-timemarker.tl-timemarker-active .tl-timemarker-text h2.tl-headline {
+  color: #FFFFFF !important;
+}
+
+/* ---------- ERA COLOURS ---------- */
+
+.tl-timeera:nth-child(3n+1),
+.tl-timeera:nth-child(3n+1) .tl-timeera-background {
+  background: rgba(255,214,209,0.42) !important;
+}
+
+.tl-timeera:nth-child(3n+2),
+.tl-timeera:nth-child(3n+2) .tl-timeera-background {
+  background: rgba(217,237,248,0.52) !important;
+}
+
+.tl-timeera:nth-child(3n+3),
+.tl-timeera:nth-child(3n+3) .tl-timeera-background {
+  background: rgba(221,240,188,0.50) !important;
+}
+
+/* era labels */
+.tl-timeera .tl-headline {
+  color: #24303A !important;
+  font-weight: 700 !important;
+}
+
+/* Attempt to visually push era labels lower */
+.tl-timeera .tl-timeera-text {
+  top: auto !important;
+  bottom: 4px !important;
+}
