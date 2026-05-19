@@ -300,18 +300,6 @@ font-weight: 700 !important;
     0 0 10px rgba(255,111,97,0.35) !important;
 }
 
-/* previous title left aligned */
-.tl-slidenav-previous .tl-slidenav-title {
-  text-align: left !important;
-  align-self: flex-start !important;
-}
-
-/* next title right aligned */
-.tl-slidenav-next .tl-slidenav-title {
-  text-align: right !important;
-  align-self: flex-end !important;
-}
-
 /* ---------- STRONGER / CENTERED ARROW BUBBLES ---------- */
 
 .tl-timeline .tl-slidenav-next,
@@ -437,116 +425,37 @@ font-weight: 700 !important;
   top: auto !important;
   bottom: 4px !important;
 }
-/* ===== FIX: MEDIA BESIDE TEXT, NOT BELOW ===== */
+/* ---------- SAFE SLIDE ALIGNMENT FIX ---------- */
 
-.tl-slide-content-container {
-  display: table !important;
-  width: 100% !important;
-  height: 100% !important;
-}
-
+/* Do not override TimelineJS layout system */
+.tl-slide-content-container,
 .tl-slide-media,
-.tl-slide-text {
-  display: table-cell !important;
-  vertical-align: middle !important;
-  float: none !important;
-}
-
-.tl-slide-media {
-  width: 50% !important;
-}
-
-.tl-slide-text {
-  width: 50% !important;
-}
-
-.tl-media {
-  display: block !important;
-}
-
-.tl-media-content-container {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
+.tl-slide-text,
+.tl-media,
 .tl-text {
-  display: block !important;
-  padding-top: 2rem !important;
-  padding-bottom: 2rem !important;
-}
-/* ===== FIX: RESTORE TWO-COLUMN SLIDE LAYOUT ===== */
-
-/* Make the slide content a stable two-column grid */
-.tl-slide-content-container {
-  display: grid !important;
-  grid-template-columns: minmax(0, 48%) minmax(0, 42%) !important;
-  column-gap: 5% !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-/* Reset TimelineJS media/text positioning */
-.tl-slide-media,
-.tl-slide-text {
-  float: none !important;
-  width: auto !important;
-  max-width: none !important;
-  position: relative !important;
-  left: auto !important;
-  right: auto !important;
-  top: auto !important;
-  bottom: auto !important;
+  display: revert !important;
+  align-items: revert !important;
+  justify-content: revert !important;
   transform: none !important;
-  margin: 0 !important;
 }
 
-/* Media column */
-.tl-slide-media {
-  grid-column: 1 !important;
-  align-self: center !important;
-  justify-self: end !important;
-}
-
-/* Text column */
-.tl-slide-text {
-  grid-column: 2 !important;
-  align-self: center !important;
-  justify-self: start !important;
-}
-
-/* Keep the glass panel inside its column */
+/* Keep text panel from becoming too wide */
 .tl-text {
-  display: block !important;
-  width: 100% !important;
   max-width: 520px !important;
-  padding: 1.8rem 1.8rem !important;
-  box-sizing: border-box !important;
+  padding: 2rem 2rem !important;
 }
 
-/* Prevent text box from becoming too wide */
-.tl-text-content-container {
-  max-width: 520px !important;
-  box-sizing: border-box !important;
-}
-
-/* Keep media from growing too large */
-.tl-media {
-  display: block !important;
-  max-width: 100% !important;
-}
-
-.tl-media-content-container,
+/* Keep media compact enough to sit beside text */
 .tl-media-content {
-  max-width: 100% !important;
-  box-sizing: border-box !important;
+  max-width: 520px !important;
+  margin: 0 auto !important;
 }
 
-/* Media itself should scale inside column */
-.tl-media-content img,
-.tl-media-content iframe,
-.tl-media-content video {
-  max-width: 100% !important;
-  height: auto !important;
+/* Preserve your nice media styling */
+.tl-media-content {
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  box-shadow:
+    0 18px 32px rgba(36,48,58,0.18),
+    0 4px 10px rgba(106,176,222,0.18) !important;
 }
