@@ -474,3 +474,79 @@ font-weight: 700 !important;
   padding-top: 2rem !important;
   padding-bottom: 2rem !important;
 }
+/* ===== FIX: RESTORE TWO-COLUMN SLIDE LAYOUT ===== */
+
+/* Make the slide content a stable two-column grid */
+.tl-slide-content-container {
+  display: grid !important;
+  grid-template-columns: minmax(0, 48%) minmax(0, 42%) !important;
+  column-gap: 5% !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Reset TimelineJS media/text positioning */
+.tl-slide-media,
+.tl-slide-text {
+  float: none !important;
+  width: auto !important;
+  max-width: none !important;
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  margin: 0 !important;
+}
+
+/* Media column */
+.tl-slide-media {
+  grid-column: 1 !important;
+  align-self: center !important;
+  justify-self: end !important;
+}
+
+/* Text column */
+.tl-slide-text {
+  grid-column: 2 !important;
+  align-self: center !important;
+  justify-self: start !important;
+}
+
+/* Keep the glass panel inside its column */
+.tl-text {
+  display: block !important;
+  width: 100% !important;
+  max-width: 520px !important;
+  padding: 1.8rem 1.8rem !important;
+  box-sizing: border-box !important;
+}
+
+/* Prevent text box from becoming too wide */
+.tl-text-content-container {
+  max-width: 520px !important;
+  box-sizing: border-box !important;
+}
+
+/* Keep media from growing too large */
+.tl-media {
+  display: block !important;
+  max-width: 100% !important;
+}
+
+.tl-media-content-container,
+.tl-media-content {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Media itself should scale inside column */
+.tl-media-content img,
+.tl-media-content iframe,
+.tl-media-content video {
+  max-width: 100% !important;
+  height: auto !important;
+}
