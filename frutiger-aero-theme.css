@@ -299,6 +299,17 @@ font-weight: 700 !important;
     0 1px 0 rgba(255,255,255,0.85),
     0 0 10px rgba(255,111,97,0.35) !important;
 }
+/* previous title left aligned */
+.tl-slidenav-previous .tl-slidenav-title {
+  text-align: left !important;
+  align-self: flex-start !important;
+}
+
+/* next title right aligned */
+.tl-slidenav-next .tl-slidenav-title {
+  text-align: right !important;
+  align-self: flex-end !important;
+}
 
 /* ---------- STRONGER / CENTERED ARROW BUBBLES ---------- */
 
@@ -309,11 +320,11 @@ font-weight: 700 !important;
 
 /* move arrows slightly inward */
 .tl-slidenav-next {
-  right: 18px !important;
+  right: 16px !important;
 }
 
 .tl-slidenav-previous {
-  left: 18px !important;
+  left: 16px !important;
 }
 
 .tl-slidenav-icon {
@@ -424,86 +435,4 @@ font-weight: 700 !important;
 .tl-timeera .tl-timeera-text {
   top: auto !important;
   bottom: 4px !important;
-}
-/* ---------- SAFE SLIDE ALIGNMENT FIX ---------- */
-
-/* Do not override TimelineJS layout system */
-.tl-slide-content-container,
-.tl-slide-media,
-.tl-slide-text,
-.tl-media,
-.tl-text {
-  display: revert !important;
-  align-items: revert !important;
-  justify-content: revert !important;
-  transform: none !important;
-}
-
-/* Keep text panel from becoming too wide */
-.tl-text {
-  max-width: 520px !important;
-  padding: 2rem 2rem !important;
-}
-
-/* Keep media compact enough to sit beside text */
-.tl-media-content {
-  max-width: 520px !important;
-  margin: 0 auto !important;
-}
-
-/* Preserve your nice media styling */
-.tl-media-content {
-  border-radius: 18px !important;
-  overflow: hidden !important;
-  box-shadow:
-    0 18px 32px rgba(36,48,58,0.18),
-    0 4px 10px rgba(106,176,222,0.18) !important;
-}
-/* ===== FINAL FIX: MEDIA AND TEXT SIDE BY SIDE ===== */
-
-.tl-slide-content-container {
-  display: grid !important;
-  grid-template-columns: 46% 42% !important;
-  column-gap: 6% !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 100% !important;
-  height: 100% !important;
-  box-sizing: border-box !important;
-}
-
-.tl-media {
-  grid-column: 1 !important;
-  display: block !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  align-self: center !important;
-  justify-self: end !important;
-  float: none !important;
-}
-
-.tl-text {
-  grid-column: 2 !important;
-  display: block !important;
-  width: 100% !important;
-  max-width: 500px !important;
-  align-self: center !important;
-  justify-self: start !important;
-  float: none !important;
-  padding: 2rem !important;
-  box-sizing: border-box !important;
-}
-
-.tl-media-content-container,
-.tl-media-content {
-  max-width: 100% !important;
-  width: 100% !important;
-  margin: 0 !important;
-  box-sizing: border-box !important;
-}
-
-.tl-media-content img,
-.tl-media-content iframe,
-.tl-media-content video {
-  max-width: 100% !important;
 }
