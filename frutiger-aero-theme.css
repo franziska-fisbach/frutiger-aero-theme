@@ -707,7 +707,7 @@ font-weight: 700 !important;
 ======================================================= */
 
 .tl-slidenav-next {
-  right: 34px !important;
+  right: -8px !important;
 }
 
 /* bubble */
@@ -720,12 +720,12 @@ font-weight: 700 !important;
 .tl-slidenav-next .tl-slidenav-title {
   position: absolute !important;
 
-  top: 80px !important;
-  right: -4 !important;
+.tl-slidenav-next .tl-slidenav-title {
+  top: 74px !important;
+  right: -6px !important;
 
-  width: 105px !important;
-
-  text-align: right !important;
+  width: 92px !important;
+}
 
   font-family: "Segoe UI", sans-serif !important;
   font-size: 12px !important;
@@ -748,7 +748,7 @@ font-weight: 700 !important;
 ======================================================= */
 
 .tl-slidenav-previous {
-  left: 28px !important;
+  left: -8px !important;
 }
 
 /* move bubble further outward */
@@ -759,15 +759,16 @@ font-weight: 700 !important;
   top: 0 !important;
 }
 
+.tl-slidenav-previous .tl-slidenav-icon {
+  left: -14px !important;
+}
+
 .tl-slidenav-previous .tl-slidenav-title {
-  position: absolute !important;
+  top: 74px !important;
+  left: -12px !important;
 
-  top: 80px !important;
-  left: -4 !important;
-
-  width: 105px !important;
-
-  text-align: left !important;
+  width: 92px !important;
+}
 
   font-family: "Segoe UI", sans-serif !important;
   font-size: 12px !important;
