@@ -717,21 +717,20 @@ font-weight: 700 !important;
   top: 0 !important;
 }
 
-/* title beneath bubble */
 .tl-slidenav-next .tl-slidenav-title {
   position: absolute !important;
 
-  top: 92px !important;
+  top: 74px !important;
   right: 0 !important;
 
-  width: 120px !important;
+  width: 105px !important;
 
   text-align: right !important;
 
   font-family: "Segoe UI", sans-serif !important;
-  font-size: 17px !important;
+  font-size: 12px !important;
   font-weight: 700 !important;
-  line-height: 1.02 !important;
+  line-height: 1.08 !important;
 
   color: #FF6F61 !important;
 
@@ -760,27 +759,25 @@ font-weight: 700 !important;
   top: 0 !important;
 }
 
-/* previous text */
 .tl-slidenav-previous .tl-slidenav-title {
   position: absolute !important;
 
-  top: 92px !important;
-  left: -6px !important;
+  top: 74px !important;
+  left: 0 !important;
 
-  width: 120px !important;
+  width: 105px !important;
 
   text-align: left !important;
 
   font-family: "Segoe UI", sans-serif !important;
-  font-size: 17px !important;
+  font-size: 12px !important;
   font-weight: 700 !important;
-  line-height: 1.02 !important;
+  line-height: 1.08 !important;
 
   color: #FF6F61 !important;
 
   opacity: 0 !important;
   transition: opacity 0.25s ease !important;
-}
 
 /* show text on hover */
 .tl-slidenav-previous:hover .tl-slidenav-title {
