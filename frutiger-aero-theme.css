@@ -720,8 +720,8 @@ font-weight: 700 !important;
 .tl-slidenav-next .tl-slidenav-title {
   position: absolute !important;
 
-  top: 74px !important;
-  right: 0 !important;
+  top: 80px !important;
+  right: -4 !important;
 
   width: 105px !important;
 
@@ -762,8 +762,8 @@ font-weight: 700 !important;
 .tl-slidenav-previous .tl-slidenav-title {
   position: absolute !important;
 
-  top: 74px !important;
-  left: 0 !important;
+  top: 80px !important;
+  left: -4 !important;
 
   width: 105px !important;
 
