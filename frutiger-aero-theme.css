@@ -447,39 +447,43 @@ font-weight: 700 !important;
 .tl-caption {
   min-height: 32px !important;
 }
-/* ===== AERO WINDOW FRAME FOR MEDIA OBJECTS ===== */
+/* ===== AUTHENTIC AERO WINDOW FRAME FOR TIMELINE MEDIA ===== */
 
 .tl-media-content-container {
   position: relative !important;
   top: 34px !important;
 
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.55), rgba(106,176,222,0.32)),
-    linear-gradient(90deg, rgba(255,255,255,0.38), rgba(255,255,255,0.08)) !important;
+  width: 560px !important;
+  max-width: 100% !important;
 
-  border: 1px solid rgba(36,48,58,0.35) !important;
-  border-radius: 14px !important;
+  padding: 30px 6px 6px 6px !important;
 
-  padding: 34px 8px 8px 8px !important;
+  border: 1px solid rgba(0, 0, 0, 0.55) !important;
+  border-radius: 8px !important;
+
+  background-color: hsl(202, 58%, 55%) !important;
 
   box-shadow:
-    0 18px 34px rgba(36,48,58,0.20),
-    inset 0 1px 0 rgba(255,255,255,0.95),
-    inset 0 0 0 1px rgba(255,255,255,0.55) !important;
+    2px 2px 10px 1px rgba(0, 0, 0, 0.34),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.96) !important;
 
   overflow: visible !important;
+  box-sizing: border-box !important;
+  z-index: 0 !important;
 }
 
-/* fake glossy title bar */
+/* full-window glass layer */
 .tl-media-content-container::before {
   content: "Media Viewer";
   position: absolute;
+  z-index: 1;
+
   top: 0;
   left: 0;
   right: 0;
-
   height: 28px;
-  padding-left: 12px;
+
+  padding-left: 10px;
 
   display: flex;
   align-items: center;
@@ -487,101 +491,202 @@ font-weight: 700 !important;
   font-family: "Segoe UI", "SegoeUI", Arial, sans-serif;
   font-size: 12px;
   font-weight: 700;
-  color: #24303A;
 
-  border-radius: 13px 13px 0 0;
+  color: #000000;
+
+  border-radius: 7px 7px 0 0;
 
   background:
-    linear-gradient(180deg, rgba(255,255,255,0.85), rgba(217,237,248,0.42) 45%, rgba(106,176,222,0.42)),
-    linear-gradient(90deg, rgba(255,255,255,0.55), rgba(255,255,255,0.12));
+    linear-gradient(135deg, rgba(255,255,255,0.34) 70px, transparent 100px),
+    linear-gradient(225deg, rgba(255,255,255,0.34) 70px, transparent 100px),
+    linear-gradient(
+      54deg,
+      rgba(0,0,0,0.13) 0 4%, rgba(102,102,102,0.07) 6%, rgba(0,0,0,0.13) 8% 10%,
+      rgba(0,0,0,0.13) 15% 16%, rgba(170,170,170,0.07) 17% 18%, rgba(0,0,0,0.13) 23% 24%,
+      rgba(187,187,187,0.13) 25% 26%, rgba(0,0,0,0.13) 31% 33%,
+      rgba(187,187,187,0.13) 36% 40%, rgba(0,0,0,0.13) 48% 49%,
+      rgba(187,187,187,0.13) 57% 63%, rgba(0,0,0,0.13) 80% 84%
+    ) left center / 100vw 100vh no-repeat fixed,
+    linear-gradient(
+      transparent 20%,
+      rgba(255,255,255,0.70) 40%,
+      transparent 41%
+    ),
+    hsl(202, 58%, 55%);
 
-  text-shadow: 0 1px 8px rgba(255,255,255,0.95);
+  text-shadow:
+    0 0 10px #fff,
+    0 0 10px #fff,
+    0 0 10px #fff,
+    0 0 10px #fff;
 
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.98),
-    0 1px 0 rgba(36,48,58,0.18);
+    inset 0 1px 0 rgba(255,255,255,0.99),
+    inset 1px 0 0 rgba(255,255,255,0.99),
+    inset -1px 0 0 rgba(255,255,255,0.99);
 }
 
-/* fake window buttons */
+/* fake Windows control buttons */
 .tl-media-content-container::after {
-  content: "–  □  ×";
+  content: "—  □  ×";
   position: absolute;
-  top: 3px;
+  z-index: 2;
+
+  top: 0;
   right: 8px;
 
-  height: 20px;
-  padding: 0 8px;
+  min-width: 86px;
+  height: 22px;
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
   font-family: "Segoe UI", Arial, sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 3px;
 
-  color: #FFFFFF;
+  color: rgba(0,0,0,0.72);
 
-  border-radius: 0 0 7px 7px;
+  border: 1px solid rgba(0,0,0,0.32);
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
 
   background:
-    linear-gradient(180deg, #FFB1A8 0%, #FF6F61 52%, #D9574B 100%);
+    linear-gradient(
+      rgba(255,255,255,0.52),
+      rgba(255,255,255,0.32) 45%,
+      rgba(0,0,0,0.10) 50%,
+      rgba(0,0,0,0.10) 75%,
+      rgba(255,255,255,0.50)
+    );
 
   box-shadow:
-    0 0 8px rgba(255,111,97,0.35),
-    inset 0 1px 0 rgba(255,255,255,0.7);
+    0 1px 0 rgba(255,255,255,0.98),
+    1px 0 0 rgba(255,255,255,0.98),
+    -1px 0 0 rgba(255,255,255,0.98);
+
+  text-shadow:
+    0 0 3px rgba(255,255,255,0.9),
+    0 1px 0 rgba(255,255,255,0.8);
 }
 
-/* media inside the window */
+/* actual media area as the inset window body */
 .tl-media-content {
-  border-radius: 8px !important;
-  overflow: hidden !important;
+  position: relative !important;
+  z-index: 3 !important;
+
+  margin: 0 !important;
+  padding: 6px !important;
+
+  border: 1px solid rgba(0,0,0,0.65) !important;
+  border-radius: 2px !important;
+
+  background: #f0f0f0 !important;
 
   box-shadow:
-    0 4px 12px rgba(36,48,58,0.18) !important;
-}
-/* ===== COLOUR VARIATION FOR MEDIA VIEWER FRAMES ===== */
+    0 0 0 1px rgba(255,255,255,0.62),
+    0 4px 12px rgba(0,0,0,0.18) !important;
 
-/* Coral */
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* make embedded media sit cleanly inside body */
+.tl-media-content iframe,
+.tl-media-content img,
+.tl-media-content video {
+  display: block !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+/* ===== COLOUR VARIATION FOR AUTHENTIC AERO MEDIA WINDOWS ===== */
+
+/* 1 — Sky Blue / default Aero */
 .tl-slide:nth-child(4n+1) .tl-media-content-container {
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.62), rgba(255,214,209,0.45)) !important;
-  border-color: rgba(255,111,97,0.55) !important;
+  background-color: #6AB0DE !important;
+  border-color: rgba(77,145,189,0.75) !important;
 }
 
 .tl-slide:nth-child(4n+1) .tl-media-content-container::before {
-  background: linear-gradient(180deg, #FFFFFF 0%, #FFD6D1 48%, #FF6F61 100%) !important;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.34) 70px, transparent 100px),
+    linear-gradient(225deg, rgba(255,255,255,0.34) 70px, transparent 100px),
+    linear-gradient(
+      54deg,
+      rgba(0,0,0,0.13) 0 4%, rgba(102,102,102,0.07) 6%, rgba(0,0,0,0.13) 8% 10%,
+      rgba(0,0,0,0.13) 15% 16%, rgba(170,170,170,0.07) 17% 18%, rgba(0,0,0,0.13) 23% 24%,
+      rgba(187,187,187,0.13) 25% 26%, rgba(0,0,0,0.13) 31% 33%,
+      rgba(187,187,187,0.13) 36% 40%, rgba(0,0,0,0.13) 48% 49%,
+      rgba(187,187,187,0.13) 57% 63%, rgba(0,0,0,0.13) 80% 84%
+    ) left center / 100vw 100vh no-repeat fixed,
+    linear-gradient(transparent 20%, rgba(255,255,255,0.70) 40%, transparent 41%),
+    #6AB0DE !important;
 }
 
-/* Sky Blue */
+/* 2 — Coral */
 .tl-slide:nth-child(4n+2) .tl-media-content-container {
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.62), rgba(217,237,248,0.55)) !important;
-  border-color: rgba(106,176,222,0.6) !important;
+  background-color: #FF6F61 !important;
+  border-color: rgba(217,87,75,0.78) !important;
 }
 
 .tl-slide:nth-child(4n+2) .tl-media-content-container::before {
-  background: linear-gradient(180deg, #FFFFFF 0%, #D9EDF8 48%, #6AB0DE 100%) !important;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.34) 70px, transparent 100px),
+    linear-gradient(225deg, rgba(255,255,255,0.34) 70px, transparent 100px),
+    linear-gradient(
+      54deg,
+      rgba(0,0,0,0.13) 0 4%, rgba(102,102,102,0.07) 6%, rgba(0,0,0,0.13) 8% 10%,
+      rgba(0,0,0,0.13) 15% 16%, rgba(170,170,170,0.07) 17% 18%, rgba(0,0,0,0.13) 23% 24%,
+      rgba(187,187,187,0.13) 25% 26%, rgba(0,0,0,0.13) 31% 33%,
+      rgba(187,187,187,0.13) 36% 40%, rgba(0,0,0,0.13) 48% 49%,
+      rgba(187,187,187,0.13) 57% 63%, rgba(0,0,0,0.13) 80% 84%
+    ) left center / 100vw 100vh no-repeat fixed,
+    linear-gradient(transparent 20%, rgba(255,255,255,0.72) 40%, transparent 41%),
+    #FF6F61 !important;
 }
 
-/* Yellow */
+/* 3 — Warm Yellow */
 .tl-slide:nth-child(4n+3) .tl-media-content-container {
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.68), rgba(255,242,174,0.58)) !important;
-  border-color: rgba(217,188,47,0.65) !important;
+  background-color: #F2D64B !important;
+  border-color: rgba(217,188,47,0.85) !important;
 }
 
 .tl-slide:nth-child(4n+3) .tl-media-content-container::before {
-  background: linear-gradient(180deg, #FFFFFF 0%, #FFF2AE 48%, #F2D64B 100%) !important;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.40) 70px, transparent 100px),
+    linear-gradient(225deg, rgba(255,255,255,0.40) 70px, transparent 100px),
+    linear-gradient(
+      54deg,
+      rgba(0,0,0,0.10) 0 4%, rgba(102,102,102,0.05) 6%, rgba(0,0,0,0.10) 8% 10%,
+      rgba(0,0,0,0.10) 15% 16%, rgba(170,170,170,0.06) 17% 18%, rgba(0,0,0,0.10) 23% 24%,
+      rgba(187,187,187,0.12) 25% 26%, rgba(0,0,0,0.10) 31% 33%,
+      rgba(187,187,187,0.12) 36% 40%, rgba(0,0,0,0.10) 48% 49%,
+      rgba(187,187,187,0.12) 57% 63%, rgba(0,0,0,0.10) 80% 84%
+    ) left center / 100vw 100vh no-repeat fixed,
+    linear-gradient(transparent 20%, rgba(255,255,255,0.78) 40%, transparent 41%),
+    #F2D64B !important;
 }
 
-/* Green */
+/* 4 — Lime Green */
 .tl-slide:nth-child(4n+4) .tl-media-content-container {
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.66), rgba(221,240,188,0.55)) !important;
-  border-color: rgba(162,214,90,0.65) !important;
+  background-color: #A2D65A !important;
+  border-color: rgba(124,177,59,0.85) !important;
 }
 
 .tl-slide:nth-child(4n+4) .tl-media-content-container::before {
-  background: linear-gradient(180deg, #FFFFFF 0%, #DDF0BC 48%, #A2D65A 100%) !important;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.38) 70px, transparent 100px),
+    linear-gradient(225deg, rgba(255,255,255,0.38) 70px, transparent 100px),
+    linear-gradient(
+      54deg,
+      rgba(0,0,0,0.11) 0 4%, rgba(102,102,102,0.06) 6%, rgba(0,0,0,0.11) 8% 10%,
+      rgba(0,0,0,0.11) 15% 16%, rgba(170,170,170,0.06) 17% 18%, rgba(0,0,0,0.11) 23% 24%,
+      rgba(187,187,187,0.12) 25% 26%, rgba(0,0,0,0.11) 31% 33%,
+      rgba(187,187,187,0.12) 36% 40%, rgba(0,0,0,0.11) 48% 49%,
+      rgba(187,187,187,0.12) 57% 63%, rgba(0,0,0,0.11) 80% 84%
+    ) left center / 100vw 100vh no-repeat fixed,
+    linear-gradient(transparent 20%, rgba(255,255,255,0.75) 40%, transparent 41%),
+    #A2D65A !important;
 }
