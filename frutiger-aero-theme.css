@@ -436,3 +436,19 @@ font-weight: 700 !important;
   top: auto !important;
   bottom: 4px !important;
 }
+/* ===== FIX: ALIGN MEDIA VISUALLY WITH TEXT CARD ===== */
+
+.tl-media {
+  margin-top: 48px !important;
+}
+
+/* keep captions aligned neatly below media */
+.tl-caption,
+.tl-credit {
+  margin-top: 12px !important;
+}
+
+/* optional: keep media from becoming too tall */
+.tl-media-content {
+  max-height: 390px !important;
+}
