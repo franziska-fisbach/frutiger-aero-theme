@@ -1101,3 +1101,24 @@ font-weight: 700 !important;
 
   margin: 0 !important;
 }
+/* ===== ULTRA COMPACT TIMELINE THUMBNAILS ===== */
+
+.tl-timemarker-media-container {
+  width: 14px !important;
+  height: 14px !important;
+  min-width: 14px !important;
+
+  margin-right: 4px !important;
+  padding: 0 !important;
+
+  border-radius: 2px !important;
+
+  flex-shrink: 0 !important;
+}
+
+/* thumbnail image */
+.tl-timemarker-media-container img {
+  width: 14px !important;
+  height: 14px !important;
+  object-fit: cover !important;
+}
