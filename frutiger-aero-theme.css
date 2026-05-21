@@ -1043,3 +1043,59 @@ font-weight: 700 !important;
   object-fit: cover !important;
   display: block !important;
 }
+/* ===== RESTORE READABLE TIMELINE FLAGS ===== */
+
+.tl-timemarker .tl-timemarker-content-container {
+  min-height: 48px !important;
+  height: auto !important;
+  padding: 6px 10px !important;
+  border-radius: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* media thumbnail/icon like TimelineJS default */
+.tl-timemarker-media-container {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  margin-right: 9px !important;
+  border-radius: 3px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* thumbnail image */
+.tl-timemarker-media-container img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* text area */
+.tl-timemarker .tl-timemarker-text {
+  display: block !important;
+  overflow: hidden !important;
+  max-width: 160px !important;
+}
+
+/* marker headline: allow two lines */
+.tl-timemarker .tl-timemarker-text h2.tl-headline {
+  font-size: 14px !important;
+  line-height: 1.12 !important;
+  font-weight: 700 !important;
+
+  white-space: normal !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+
+  max-height: 2.4em !important;
+  margin: 0 !important;
+}
