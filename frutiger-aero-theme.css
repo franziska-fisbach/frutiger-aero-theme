@@ -701,89 +701,60 @@ font-weight: 700 !important;
   width: 120px !important;
   overflow: visible !important;
 }
-
-/* =======================================================
-   AERO NAVIGATION POSITIONING — CLEAN VERSION
-======================================================= */
-
-.tl-slidenav-next,
-.tl-slidenav-previous {
-  width: 120px !important;
-  overflow: visible !important;
-}
-
 /* NEXT */
-
-.tl-slidenav-next {
-  right: 34px !important;
-}
-
-.tl-slidenav-next .tl-slidenav-icon {
-  position: absolute !important;
-  right: 0 !important;
-  top: 0 !important;
-}
-
 .tl-slidenav-next .tl-slidenav-title {
   position: absolute !important;
   top: 72px !important;
-  right: 0 !important;
+  right: -14px !important;
 
-  width: 80px !important;
+  width: 72px !important;
+
   text-align: right !important;
 
   font-family: "Segoe UI", sans-serif !important;
-  font-size: 12px !important;
+  font-size: 11px !important;
   font-weight: 700 !important;
-  line-height: 1.08 !important;
-  color: #D9574B !important;
+  line-height: 1.12 !important;
+
+  color: #4D91BD !important;
 
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
 
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.85),
+    0 0 8px rgba(106,176,222,0.25) !important;
+
   opacity: 0 !important;
   transition: opacity 0.25s ease !important;
-}
-
-.tl-slidenav-next:hover .tl-slidenav-title {
-  opacity: 1 !important;
 }
 
 /* PREVIOUS */
-
-.tl-slidenav-previous {
-  left: 28px !important;
-}
-
-.tl-slidenav-previous .tl-slidenav-icon {
-  position: absolute !important;
-  left: -10px !important;
-  top: 0 !important;
-}
-
 .tl-slidenav-previous .tl-slidenav-title {
   position: absolute !important;
   top: 72px !important;
-  left: -10px !important;
+  left: -14px !important;
 
-  width: 80px !important;
+  width: 72px !important;
+
   text-align: left !important;
 
   font-family: "Segoe UI", sans-serif !important;
-  font-size: 12px !important;
+  font-size: 11px !important;
   font-weight: 700 !important;
-  line-height: 1.08 !important;
-  color: #D9574B !important;
+  line-height: 1.12 !important;
+
+  color: #4D91BD !important;
 
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
 
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.85),
+    0 0 8px rgba(106,176,222,0.25) !important;
+
   opacity: 0 !important;
   transition: opacity 0.25s ease !important;
-}
-
-.tl-slidenav-previous:hover .tl-slidenav-title {
-  opacity: 1 !important;
 }
