@@ -1122,3 +1122,18 @@ font-weight: 700 !important;
   height: 14px !important;
   object-fit: cover !important;
 }
+/* TEST: make timeline thumbnails visible */
+.tl-timemarker-media-container {
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  background: #FFF2AE !important;
+  border: 2px solid #FF6F61 !important;
+}
+
+.tl-timemarker-media-container img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+}
