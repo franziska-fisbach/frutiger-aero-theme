@@ -691,19 +691,35 @@ font-weight: 700 !important;
     #A2D65A !important;
 }
 /* =======================================================
-   AERO NAVIGATION POSITIONING
+   AERO NAVIGATION POSITIONING — FINAL CLEAN VERSION
 ======================================================= */
 
-/* ---------- BOTH NAV BUTTONS ---------- */
+/* BOTH NAVIGATION AREAS */
 
 .tl-slidenav-next,
 .tl-slidenav-previous {
   width: 120px !important;
   overflow: visible !important;
 }
-/* NEXT */
+
+/* =======================================================
+   NEXT BUTTON
+======================================================= */
+
+.tl-slidenav-next {
+  right: 34px !important;
+}
+
+.tl-slidenav-next .tl-slidenav-icon {
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+}
+
+/* next title */
 .tl-slidenav-next .tl-slidenav-title {
   position: absolute !important;
+
   top: 72px !important;
   right: -14px !important;
 
@@ -716,23 +732,43 @@ font-weight: 700 !important;
   font-weight: 700 !important;
   line-height: 1.12 !important;
 
-  color: #4D91BD !important;
+  color: #24303A !important;
 
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
 
   text-shadow:
-    0 1px 0 rgba(255,255,255,0.85),
-    0 0 8px rgba(106,176,222,0.25) !important;
+    0 1px 0 rgba(255,255,255,0.90),
+    0 0 6px rgba(106,176,222,0.18) !important;
 
   opacity: 0 !important;
   transition: opacity 0.25s ease !important;
 }
 
-/* PREVIOUS */
+.tl-slidenav-next:hover .tl-slidenav-title {
+  opacity: 1 !important;
+}
+
+/* =======================================================
+   PREVIOUS BUTTON
+======================================================= */
+
+.tl-slidenav-previous {
+  left: -8px !important;
+}
+
+.tl-slidenav-previous .tl-slidenav-icon {
+  position: absolute !important;
+
+  left: -14px !important;
+  top: 0 !important;
+}
+
+/* previous title */
 .tl-slidenav-previous .tl-slidenav-title {
   position: absolute !important;
+
   top: 72px !important;
   left: -14px !important;
 
@@ -745,16 +781,20 @@ font-weight: 700 !important;
   font-weight: 700 !important;
   line-height: 1.12 !important;
 
-  color: #4D91BD !important;
+  color: #24303A !important;
 
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
 
   text-shadow:
-    0 1px 0 rgba(255,255,255,0.85),
-    0 0 8px rgba(106,176,222,0.25) !important;
+    0 1px 0 rgba(255,255,255,0.90),
+    0 0 6px rgba(106,176,222,0.18) !important;
 
   opacity: 0 !important;
   transition: opacity 0.25s ease !important;
+}
+
+.tl-slidenav-previous:hover .tl-slidenav-title {
+  opacity: 1 !important;
 }
