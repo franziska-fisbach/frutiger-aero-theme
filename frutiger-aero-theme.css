@@ -957,3 +957,89 @@ font-weight: 700 !important;
   text-shadow:
     0 1px 4px rgba(36,48,58,0.35) !important;
 }
+/* ===== NEXT NAVIGATION MATCH PREVIOUS POSITION ===== */
+
+.tl-slidenav-next {
+  right: 18px !important;
+  width: 110px !important;
+  overflow: visible !important;
+}
+
+.tl-slidenav-next .tl-slidenav-icon {
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+}
+
+.tl-slidenav-next .tl-slidenav-title {
+  position: absolute !important;
+  top: 72px !important;
+  right: 0 !important;
+
+  width: 72px !important;
+
+  text-align: right !important;
+  font-size: 11px !important;
+  line-height: 1.12 !important;
+
+  color: #4D91BD !important;
+
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+/* ===== TIMELINE MARKERS REFINED ===== */
+
+.tl-timemarker .tl-timemarker-content-container {
+  min-height: 42px !important;
+  max-height: none !important;
+
+  padding: 5px 8px !important;
+
+  border-radius: 6px !important;
+  box-sizing: border-box !important;
+}
+
+.tl-timemarker .tl-timemarker-text h2.tl-headline {
+  font-size: 11px !important;
+  line-height: 1.12 !important;
+
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+
+  max-height: 2.4em !important;
+}
+
+/* allow marker text area to use space better */
+.tl-timemarker .tl-timemarker-text {
+  white-space: normal !important;
+  overflow: visible !important;
+}
+
+/* smaller thumbnail container */
+.tl-timemarker-media-container {
+  width: 30px !important;
+  height: 30px !important;
+
+  min-width: 30px !important;
+
+  border-radius: 5px !important;
+  margin-right: 7px !important;
+
+  background:
+    linear-gradient(180deg, #FFFFFF 0%, #D9EDF8 100%) !important;
+
+  border: 1px solid rgba(77,145,189,0.45) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.95),
+    0 2px 5px rgba(36,48,58,0.15) !important;
+}
+
+/* thumbnail image if TimelineJS provides one */
+.tl-timemarker-media-container img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
